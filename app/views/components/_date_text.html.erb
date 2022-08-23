@@ -1,0 +1,21 @@
+<div class="row">
+  <p id="date-text-full-day"/>
+</div>
+<div class="row">
+  <p id="date-text-full-date"/>
+</div>
+
+<script>
+  let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October',' November', 'December'];
+  let date = new Date();
+  let day = date.getDay();
+  let full_day = days[day];
+  let month = date.getMonth();
+  let month_day = date.getDate();
+  let full_month = months[month];
+  let year = date.getFullYear();
+  let full_date = `${month_day} ${full_month} ${year}`;
+  document.getElementById("date-text-full-day").innerHTML = full_day;
+  document.getElementById("date-text-full-date").innerHTML = full_date;
+</script>
